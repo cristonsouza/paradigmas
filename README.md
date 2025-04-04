@@ -1,1 +1,280 @@
-# paradigmas
+
+# IMPERATIVO (em Kotlin)
+
+## 01 Variéveis, tipos primitivos, operadores aritméticos, tuplas
+
+### Variáveis
+
+Variáveis são usadas para armazenar dados. A linguagem oferece duas palavras-chave para declarar variáveis: `var` e `val`.
+
+**`var` (variável mutável):**
+
+* Utilizada para declarar variáveis cujo valor pode ser alterado após a atribuição inicial.
+* Exemplo:
+
+```kotlin
+var idade = 25
+idade = 26 // Modificação permitida
+```
+
+**`val` (valor imutável):**
+
+* Utilizada para declarar variáveis cujo valor não pode ser alterado após a atribuição inicial (similar a uma constante).
+* Exemplo:
+
+```kotlin
+val nome = "João"
+// nome = "Maria" // Erro: reatribuição não permitida
+```
+
+**Tipos de Dados:**
+
+Kotlin é uma linguagem de **tipagem estática**, o que significa que o tipo de cada variável é conhecido em tempo de compilação. Os tipos de dados mais comuns incluem:
+
+* `Int`: Números inteiros (ex: 10, -5).
+* `Double`: Números de ponto flutuante de precisão dupla (ex: 3.14, 2.5).
+* `String`: Sequências de caracteres (ex: "Olá", "Kotlin").
+* `Boolean`: Valores lógicos (true ou false).
+* `Char`: Caracteres individuais (ex: 'A', '1').
+
+**Inferência de Tipo:**
+
+Em muitos casos, o Kotlin pode inferir o tipo de uma variável com base no valor atribuído, o que significa que você não precisa especificar o tipo explicitamente.
+
+* Exemplo:
+
+```kotlin
+val mensagem = "Kotlin é incrível" // Tipo String inferido
+val pi = 3.14 // Tipo Double inferido
+```
+
+**Declaração Explícita de Tipo:**
+
+Você também pode declarar o tipo de uma variável explicitamente:
+
+* Exemplo:
+
+```kotlin
+val idade: Int = 30
+val altura: Double = 1.75
+```
+
+**Conversão explícita de tipos (casting)**
+
+Realizada explicitamente pelo programador, usando funções específicas.
+Funções de conversão: `toByte(), toShort(), toInt(), toLong(), toFloat(), toDouble(), toChar()`.
+
+**Considerações:**
+
+* A escolha entre `var` e `val` depende da necessidade de modificar o valor da variável. **Prefira `val` sempre que possível** para tornar o código mais seguro e previsível.
+* O uso de inferência de tipo torna o código mais conciso, mas a declaração explícita pode melhorar a clareza em alguns casos.
+
+
+
+### Literais
+
+Um literal é um valor constante que aparece diretamente no código-fonte. Kotlin suporta literais para diversos tipos de dados, como números inteiros, números de ponto flutuante, caracteres, strings e booleanos.
+
+**Literais Inteiros:**
+
+* Podem ser decimais (base 10), hexadecimais (base 16), binários (base 2) ou octais (base 8).
+    * Decimal: `123`, `-456`
+    * Hexadecimal: `0x0F`, `0X1A`
+    * Binário: `0b0010`, `0B1011`
+    * Octal: `0o12`, `0O77`
+* Por padrão, os literais inteiros são do tipo `Int`. Para literais `Long`, use o sufixo `L` ou `l` (ex: `123L`).
+
+**Literais de Ponto Flutuante:**
+
+* Podem ser representados com ou sem expoente.
+    * `3.14`, `2.71e10`, `0.5f`
+* Por padrão, os literais de ponto flutuante são do tipo `Double`. Para literais `Float`, use o sufixo `f` ou `F` (ex: `3.14f`).
+
+**Literais Booleanos:**
+
+* Representam valores lógicos: `true` e `false`.
+
+**Literais de Caractere:**
+
+* Representam um único caractere entre aspas simples: `'a'`, `'1'`, `'$'`.
+* Caracteres especiais podem ser representados com sequências de escape (ex: `'\n'` para nova linha, `'\t'` para tabulação).
+
+**Literais de String:**
+
+* Representam sequências de caracteres entre aspas duplas: `"Olá, Kotlin!"`.
+* Kotlin também oferece strings brutas (raw strings), delimitadas por três aspas duplas (`"""`), que permitem representar strings com múltiplas linhas e sem necessidade de escapar caracteres especiais.
+
+**Exemplos:**
+
+```kotlin
+fun main() {
+    val inteiroDecimal = 100
+    val inteiroHexadecimal = 0xFF
+    val inteiroBinario = 0b1010
+    val inteiroLongo = 1234567890L
+
+    val decimalSimples = 3.14
+    val decimalExponencial = 2.5e3
+    val floatLiteral = 0.5f
+
+    val booleanoVerdadeiro = true
+    val booleanoFalso = false
+
+    val caractere = 'K'
+    val caractereNovaLinha = '\n'
+
+    val stringSimples = "Kotlin é legal!"
+    val stringMultilinha = """
+        Esta é uma string
+        com múltiplas linhas.
+    """
+
+    println(inteiroDecimal)
+    println(inteiroHexadecimal)
+    println(inteiroBinario)
+    println(inteiroLongo)
+    println(decimalSimples)
+    println(decimalExponencial)
+    println(floatLiteral)
+    println(booleanoVerdadeiro)
+    println(booleanoFalso)
+    println(caractere)
+    println(caractereNovaLinha)
+    println(stringSimples)
+    println(stringMultilinha)
+}
+```
+
+
+
+
+
+### Expressões aritméticas
+
+Em Kotlin, expressões aritméticas são usadas para realizar cálculos matemáticos com números. A linguagem oferece um conjunto completo de operadores aritméticos que permitem realizar operações básicas e avançadas.
+
+**Operadores Aritméticos Básicos:**
+
+* **+ (Adição):** Soma dois valores.
+* **- (Subtração):** Subtrai o segundo valor do primeiro.
+* **\* (Multiplicação):** Multiplica dois valores.
+* **\/ (Divisão):** Divide o primeiro valor pelo segundo. Divisão inteira (trunca a parte fracionária) se os operandos forem inteiros. Divisão ponto flutuante se os operandos forem de ponto flutuante.
+* **% (Módulo):** Retorna o resto da divisão do primeiro valor pelo segundo.
+
+**Exemplos:**
+
+```kotlin
+fun main() {
+    val a = 10
+    val b = 5
+
+    println("a + b = ${a + b}")    // Saída: a + b = 15
+    println("a - b = ${a - b}")    // Saída: a - b = 5
+    println("a * b = ${a * b}")    // Saída: a * b = 50
+    println("a / b = ${a / b}")    // Saída: a / b = 2
+    println("a % b = ${a % b}")    // Saída: a % b = 0
+
+    val c = 7
+    val d = 3
+
+    println("c % d = ${c % d}")   // Saída: c % d = 1
+}
+```
+
+**Precedência de Operadores:**
+
+Kotlin segue a ordem padrão de precedência de operadores:
+
+1.  Multiplicação (\*), divisão (\/) e módulo (%)
+2.  Adição (+) e subtração (-)
+
+Você pode usar parênteses para alterar a ordem de avaliação:
+
+```kotlin
+fun main() {
+    val resultado1 = 10 + 5 * 2    // Resultado: 20
+    val resultado2 = (10 + 5) * 2  // Resultado: 30
+
+    println("Resultado 1: $resultado1")
+    println("Resultado 2: $resultado2")
+}
+```
+
+**Tipos de Dados Numéricos:**
+
+Kotlin oferece vários tipos de dados numéricos:
+
+* **Byte:** Bytes (1 byte) (-128 a 127).
+* **Short:** Números inteiros curtos (2 bytes) (-32768 a 32767).
+* **Int:** Números inteiros (4 bytes) (-2147483648 a 2147483647).
+* **Long:** Números inteiros longos (8 bytes) (-9223372036854775808 a 9223372036854775807).
+* **Double:** Números de ponto flutuante de precisão dupla (8 bytes) (precisão: 15-16 dígitos, potência: 10^-324 a 10^308).
+* **Float:** Números de ponto flutuante de precisão simples (4 bytes) (precisão: 6-7 dígitos, potência: 10^-45 a 10^38).
+
+É importante observar que, ao realizar operações aritméticas com tipos de dados diferentes, o Kotlin **realiza conversões automáticas** para garantir que o resultado seja do tipo mais adequado.
+
+**Exemplo:**
+
+```kotlin
+fun main() {
+    val inteiro = 10
+    val decimal = 2.5
+
+    val resultado = inteiro + decimal // Resultado será um Double
+
+    println("Resultado: $resultado") //resultado = 12.5
+}
+```
+
+
+
+### Tuplas
+
+Em Kotlin, `Pair` e `Triple` são classes que permitem agrupar dois e três valores, respectivamente. Eles são úteis quando você precisa retornar múltiplos valores de uma função ou quando deseja agrupar dados relacionados de forma concisa.
+
+**Pair**
+
+* `Pair` é usado para agrupar dois valores de tipos possivelmente diferentes.
+* Ele é definido como `Pair<A, B>`, onde `A` e `B` são os tipos dos dois valores.
+* Você pode criar um `Pair` usando a função `Pair()` ou a função `to()`.
+* Você pode acessar os valores individuais de um `Pair` usando as propriedades `first` e `second`.
+
+**Exemplos:**
+
+```kotlin
+fun main() {
+    val pessoa = Pair("João", 30) // Cria um Pair usando Pair()
+    val coordenadas = "Latitude" to "Longitude" // Cria um Pair usando "to"
+
+    println("Nome: ${pessoa.first}, Idade: ${pessoa.second}") //imprime: Nome: João, Idade: 30
+    println("Latitude: ${coordenadas.first}, Longitude: ${coordenadas.second}") //imprime: Latitude: Latitude, Longitude: Longitude
+}
+```
+
+**Triple**
+
+* `Triple` é usado para agrupar três valores de tipos possivelmente diferentes.
+* Ele é definido como `Triple<A, B, C>`, onde `A`, `B` e `C` são os tipos dos três valores.
+* Você cria um `Triple` usando a função `Triple()`.
+* Você pode acessar os valores individuais de um `Triple` usando as propriedades `first`, `second` e `third`.
+
+**Exemplos:**
+
+```kotlin
+fun main() {
+    val cores = Triple("Vermelho", "Verde", "Azul")
+
+    println("Cores: ${cores.first}, ${cores.second}, ${cores.third}") //imprime: Cores: Vermelho, Verde, Azul
+}
+```
+
+**Quando usar:**
+
+* `Pair` e `Triple` são úteis para funções que precisam retornar múltiplos valores sem a necessidade de criar uma classe de dados personalizada.
+* Eles também podem ser usados para agrupar dados relacionados de forma concisa, especialmente em situações onde a clareza e a brevidade são importantes.
+
+**Considerações:**
+
+* Embora `Pair` e `Triple` sejam convenientes, eles podem tornar o código menos legível se usados em excesso, especialmente quando os valores agrupados têm significados específicos.
+* Em casos onde os dados agrupados têm uma estrutura complexa ou significados bem definidos, é recomendável criar classes de dados personalizadas para melhorar a clareza e a manutenibilidade do código.
+* `Pair` e `Triple` são imutáveis, o que significa que uma vez criados, seus valores não podem ser alterados. Isso os torna seguros para uso em contextos onde a imutabilidade é desejada.
