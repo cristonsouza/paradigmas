@@ -31,8 +31,10 @@ fun main() {
     */
 
     /**
-     * Forneça a função 'calculadora' que recebe dois valores inteiros e um operador em caráter ('+', '-', '*' ou '/')
-     * e retorna uma string contendo o resultado da operação (um inteiro convertido para string, se a operação for válida). 
+     * Forneça a função 'calculadora' que recebe dois valores inteiros e um operador em caráter 
+     * ('+', '-', '*' ou '/')
+     * e retorna uma string contendo o resultado da operação (um inteiro convertido para string, se 
+     * a operação for válida). 
      * Se a operação não pode ser realizada, retorna a string "invalida".
      * Ex.: calculadora(2, 3, '+') retorna "5".
      *      calculadora(2, 3, '-') retorna "-1".
@@ -57,11 +59,13 @@ fun main() {
     */
 
     /**
-     * Forneça a função 'verificarAprovacao' que recebe as notas de 2 provas (P1 e P2) e a nota da prova final (PF), e 
+     * Forneça a função 'verificarAprovacao' que recebe as notas de 2 provas (P1 e P2) e a nota da 
+     * prova final (PF), e 
      * retorna verdadeiro se o aluno foi aprovado, e falso caso contrário.
      * Seja M a média de P1 e P2.
      * O aluno é aprovado se M >= 7.0, independente da nota fornecido para a prova final.
-     * Se 4.0 <= M < 7.0, o aluno é aprovado se PF >= 4.0 e a média entre M e PF for maior ou igual a 5.0.
+     * Se 4.0 <= M < 7.0, o aluno é aprovado se PF >= 4.0 e a média entre M e PF for maior ou igual 
+     * a 5.0.
      * Em todos os os outros casos, o aluno é reprovado.
      * Ex.: verificarAprovacao(7.0, 8.0, 0.0) retorna true.
      *      verificarAprovacao(6.0, 5.0, 3.0) retorna false.
@@ -86,7 +90,8 @@ fun main() {
      * Um funcionário trabalha de segunda a sexta, de 8 até 11:59 e de 14 até 17:59. 
      * No sábado, ele trabalha apenas de 8 até 11:59.
      *
-     * Forneça a função 'trabalhandoOuNao' que recebe um dia (1 a 7), uma hora (0 a 23) e um minuto (0 a 59) e retorna um booleano indicando se o funcionário está trabalhando ou não.
+     * Forneça a função 'trabalhandoOuNao' que recebe um dia (1 a 7), uma hora (0 a 23) e um minuto 
+     * (0 a 59) e retorna um booleano indicando se o funcionário está trabalhando ou não.
      * Os dias da semana são representados pelos códigos inteiros abaixo:
      *      1 = DOM, 2 = SEG, 3 = TER, 4 = QUA, 5 = QUI, 6 = SEX, 7 = SAB
      */
@@ -127,7 +132,8 @@ fun main() {
     */
 
     /**
-     * Forneça a função `meio`, que recebe 3 números inteiros e retorna o elemento do meio caso os 3 valores sejam colocados em ordem crescente.
+     * Forneça a função `meio`, que recebe 3 números inteiros e retorna o elemento do meio caso os 
+     * 3 valores sejam colocados em ordem crescente.
      * Ex.: meio(5, 2, 4) retorna 4.
      *      meio(6, 5, 7) retorna 6.
      */
@@ -192,10 +198,12 @@ fun main() {
 
     /**
      * Dada uma equação do 2o grau, calcule as raízes reais da equação.
-     * Entrada: 3 valores ponto flutuante, corresponde aos parâmetros 'a', 'b' e 'c' de uma equação do 2o grau.
-     * Saída: Uma tupla contendo um booleano (verdadeiro apenas se há raízes reais) e dois valores ponto flutuante
-     *        (menor raiz e maior raiz, ou zeros caso não haja raízes reais).
-     *      calcularRaizes(5.0,  3.0,   5.0) retorna (false, 0.0, 0.0)
+     * Entrada: 3 valores ponto flutuante, corresponde aos parâmetros 'a', 'b' e 'c' de uma equação 
+     *          do 2o grau.
+     * Saída: Uma tupla contendo um booleano (verdadeiro apenas se há raízes reais) e dois valores 
+     *        ponto flutuante (menor raiz e maior raiz, ou zeros caso não haja raízes reais).
+     * 
+     * Ex.: calcularRaizes(5.0,  3.0,   5.0) retorna (false, 0.0, 0.0)
      *      calcularRaizes(1.0, -1.0, -20.0) retorna (true, -4.0, 5.0)
      */
     fun calcularRaizes(a: Double, b: Double, c: Double): Triple<Boolean, Double, Double> {
