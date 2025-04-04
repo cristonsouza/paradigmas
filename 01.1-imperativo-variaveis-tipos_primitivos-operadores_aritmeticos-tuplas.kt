@@ -11,8 +11,10 @@ fun main() {
     }
 
     /**
-     * Forneça a função `celsiusToFahrenheit` que recebe uma temperatura em graus Celsius e retorna esta temperatura convertida em graus Fahrenheit.
-     * Fórmula de conversão: F = (9/5)⋅C+32, onde C é a temperatura em Celsius, e F é a temperatura em Fahrenheit.
+     * Forneça a função `celsiusToFahrenheit` que recebe uma temperatura em graus Celsius e retorna 
+     * esta temperatura convertida em graus Fahrenheit.
+     * Fórmula de conversão: F = (9/5)⋅C+32, onde C é a temperatura em Celsius, e F é a temperatura 
+     * em Fahrenheit.
      * Ex.: celsiusToFahrenheit(10.0) retorna 50.0.
      */
     fun celsiusToFahrenheit(celsius: Double): Double {
@@ -29,7 +31,8 @@ fun main() {
     */
 
     /**
-     * Forneça a função `mediaPonderada` que recebe 3 notas (1a prova, 2a prova e trabalho, nesta ordem) e retorna a média ponderada desta notas.
+     * Forneça a função `mediaPonderada` que recebe 3 notas (1a prova, 2a prova e trabalho, nesta 
+     * ordem) e retorna a média ponderada desta notas.
      * A 1a prova tem peso 5, a 2a prova tem peso 3, e o trabalho tem peso 2.
      * Ex: mediaPonderada(8.5, 6, 7) retorna 7.45, pois, (5*8.5 + 3*6 + 2*7) / 10 = 7.45.
      */
@@ -47,8 +50,10 @@ fun main() {
     */
 
     /**
-     * Forneça a função `conversaoTempo` que recebe um tempo total em segundos e retorna um Pair contendo este tempo em horas e minutos, e o restante em segundos.
-     * Ex.: conversaoTempo(7384) retorna Triple(2, 3, 4), pois 7384 segundos = 2 horas, 3 minutos e 4 segundos.
+     * Forneça a função `conversaoTempo` que recebe um tempo total em segundos e retorna um Pair 
+     * contendo este tempo em horas e minutos, e o restante em segundos.
+     * Ex.: conversaoTempo(7384) retorna Triple(2, 3, 4), pois 7384 segundos = 2 horas, 3 minutos e 
+     *      4 segundos.
      */
     fun conversaoTempo(segundosTotais: Int): Triple<Int, Int, Int> {
         // <FORNEÇA AQUI SUA SOLUÇÃO>
@@ -64,7 +69,9 @@ fun main() {
     */
 
     /**
-     * Forneça a função `premioLoteria` que recebe o valor apostado por cada um dos 3 apostadores, e o prêmio total a ser repartido. Cada apostador ganha uma fração do prêmio proporcional ao valor apostado.
+     * Forneça a função `premioLoteria` que recebe o valor apostado por cada um dos 3 apostadores, e 
+     * o prêmio total a ser repartido. Cada apostador ganha uma fração do prêmio proporcional ao valor 
+     * apostado.
      * Ex: premioLoteria(10, 20, 30, 1200) retorna Triple(200.0, 400.0, 600.0).
      * -- Ganho do 1o: 200.0, pois 1200 * (10 / (10+20+30)) = 200
      * -- Ganho do 2o: 400.0, pois 1200 * (20 / (10+20+30)) = 400
@@ -84,7 +91,8 @@ fun main() {
     */
 
     /**
-     * Forneça a função 'calcularIMC' que recebe o peso e a altura de uma pessoa, e retorna o IMC (Índice de Massa Corporal) dela.
+     * Forneça a função 'calcularIMC' que recebe o peso e a altura de uma pessoa, e retorna o IMC 
+     * (Índice de Massa Corporal) dela.
      * O IMC é calculado pela fórmula: IMC = peso / (altura * altura).
      * Ex.: calcularIMC(70.0, 1.75) retorna 22.86.
      */
@@ -125,7 +133,8 @@ fun main() {
 
     /**
      * Crie uma função que calcule a potencia de um numero (apenas chame uma função da biblioteca padrão).
-     * Obs.: Use a função `pow` do Double para calcular a potência (ex.: 2.0.pow(3)), mas lembre-se que ela retorna um Double.
+     * Obs.: Use a função `pow` do Double para calcular a potência (ex.: 2.0.pow(3)), mas lembre-se 
+     * que ela retorna um Double.
      *       Para converter para Int, use a função `toInt()`.
      * Ex.: calcularPotencia(2, 5) retorna 32.
      */
