@@ -6,3 +6,4 @@
 
 ## [02 - IMPERATIVO - Operadores lógicos e relacionais, comandos de seleção](conceitos/02-imperativo-operadores_logicos_relacionais-estruturas-selecao.md)
 - [02.1-imperativo-operadores_logicos_relacionais-estruturas-selecao.kt](exercicios/02.1-imperativo-operadores_logicos_relacionais-estruturas-selecao.kt)
+- [02.2-imperativo-operadores_logicos_relacionais-estruturas-selecao.kt](exercicios/02.2-imperativo-operadores_logicos_relacionais-estruturas-selecao.kt)
