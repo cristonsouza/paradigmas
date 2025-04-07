@@ -145,6 +145,7 @@ fun main() {
     // <INCLUA O TRECHO ABAIXO PARA TESTAR SUA SOLUÇÃO>
     /*
     assertEquals("meio(5, 2, 4)", 4, meio(5, 2, 4))
+    assertEquals("meio(5, 8, 1)", 5, meio(5, 8, 1))
     assertEquals("meio(6, 5, 7)", 6, meio(6, 5, 7))
     assertEquals("meio(1, 2, 3)", 2, meio(1, 2, 3))
     println("Todos os testes passaram para a função meio!")
