@@ -184,7 +184,8 @@ when (x) {
 Assim como o `if`, o `when` também pode ser usado como uma expressão para retornar um valor.
 
 ```kotlin
-val resultado = when (val operacao = "+") { 
+val operacao = "+"
+val resultado = when (operacao) { 
     "+" -> "Soma"
     "-" -> "Subtração"
     "*" -> "Multiplicação"
