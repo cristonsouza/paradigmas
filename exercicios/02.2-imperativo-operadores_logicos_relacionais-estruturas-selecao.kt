@@ -181,10 +181,8 @@ fun main() {
      * Forneça a função 'zerimOuUmAmericano' que recebe os números dos 4 jogadores e retorna uma 
      * string indicando o número do jogador que ganhou ("jog1", "jog2", "jog3", "jog4") ou "nenhum" 
      * se a soma deu 0.
-     * Ex.: zerimOuUmAmericano(1, 2, 3, 4) retorna "jog1".
-     *      zerimOuUmAmericano(2, 3, 4, 1) retorna "jog2".
-     *      zerimOuUmAmericano(3, 4, 1, 2) retorna "jog3".
-     *      zerimOuUmAmericano(4, 1, 2, 3) retorna "jog4".
+     * Ex.: zerimOuUmAmericano(1,  0, 0, 0) retorna "jog1".
+     *      zerimOuUmAmericano(2, 10, 1, 1) retorna "jog2".
      *      zerimOuUmAmericano(0, 0, 0, 0) retorna "nenhum".
      */
     fun zerimOuUmAmericano(jog1: Int, jog2: Int, jog3: Int, jog4: Int): String {
