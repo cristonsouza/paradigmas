@@ -12,3 +12,4 @@
 - [03.1-imperativo_repeticao.kt](exercicios/03.1-imperativo_repeticao.kt)
 
 ## [04 - Listas](conceitos/04-imperativo-listas.md)
+- [04.1-imperativo-listas.kt](exercicios/04.1-imperativo-listas.kt)
