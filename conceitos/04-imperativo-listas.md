@@ -46,6 +46,12 @@ Listas são estruturas de dados super flexíveis e você vai usar bastante. Basi
 * **Acessar elementos:** Use o índice (começando em 0) com colchetes `[]`.
 * **Obter o tamanho:** Use a propriedade `.size`.
 * **Verificar se um elemento existe:** Use o operador `in`.
+
+   ```kotlin
+   val temMorango    = "morango"  in frutas // Armazena true
+   val naoTemMorango = "morango" !in frutas // Armazena false   
+   ```
+
 * **Iterar sobre os elementos:** Use loops como `for`, ou a função `forEach`.
 
    ```kotlin
