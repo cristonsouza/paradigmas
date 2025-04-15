@@ -46,6 +46,7 @@ fun main() {
     /**
      * Função que recebe duas listas de inteiros e retorna uma nova lista contendo os elementos que 
      * estão em ambas as listas, em ordem crescente e sem repetir elementos.
+     * Para ordenar, use o método sorted() da classe List.
      * Versão usando comandos de repetição.
      */
     fun interseccaoListas(lista1: List<Int>, lista2: List<Int>): List<Int> {
