@@ -128,3 +128,9 @@ Listas são estruturas de dados super flexíveis e você vai usar bastante. Basi
 **Escolhendo entre `List` e `MutableList`:**
 
 A dica principal é: **comece com `List` (imutável) sempre que possível.** Isso torna seu código mais seguro e fácil de entender, pois você garante que a coleção não será alterada inesperadamente. Use `MutableList` apenas quando você realmente precisar modificar a lista.
+
+**Observações:**
+- Kotlin não permite índices negativos (como em Python). Vai obter um `IndexOutOfBoundsException` se usar índices negativos ou excedendo o tamanho da lista menos 1.
+- Para construir uma lista mutável partindo de uma lista imutável, estas são opções simples:
+   - O método `.toMutableList()` retorna uma cópia mutável de uma lista imutável.
+   - Pode criar uma lista mutável vazia com `mutableListOf<Int>()`, e em seguida usar o método `.addAll(elements: Collection<E>)` visto anteriormente.
