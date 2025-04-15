@@ -45,8 +45,7 @@ fun main() {
 
     /**
      * Função que recebe duas listas de inteiros e retorna uma nova lista contendo os elementos que 
-     * estão em ambas as listas, em ordem crescente e sem repetir elementos.
-     * Para ordenar, use o método sorted() da classe List.
+     * estão em ambas as listas, em qualquer ordem e sem repetir elementos.
      * Versão usando comandos de repetição.
      */
     fun interseccaoListas(lista1: List<Int>, lista2: List<Int>): List<Int> {
@@ -56,11 +55,11 @@ fun main() {
 
     // <INCLUA O TRECHO ABAIXO PARA TESTAR SUA SOLUÇÃO>
     /*
-    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [1, 2, 3, 4, 5])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(1, 2, 3, 4, 5)))
-    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])", listOf<Int>(), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(6, 7, 8, 9, 10)))
-    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [5, 4, 3, 2, 1])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(5, 4, 3, 2, 1)))
-    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)))
-    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 1, 2, 3, 4, 5])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(6, 7, 8, 9, 10, 1, 2, 3, 4, 5)))
+    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [1, 2, 3, 4, 5])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(1, 2, 3, 4, 5)).sorted())
+    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])", listOf<Int>(), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(6, 7, 8, 9, 10)).sorted())
+    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [5, 4, 3, 2, 1])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(5, 4, 3, 2, 1)).sorted())
+    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)).sorted())
+    assertEquals("interseccaoListas([1, 2, 3, 4, 5], [6, 7, 8, 9, 10, 1, 2, 3, 4, 5])", listOf(1, 2, 3, 4, 5), interseccaoListas(listOf(1, 2, 3, 4, 5), listOf(6, 7, 8, 9, 10, 1, 2, 3, 4, 5)).sorted())
     println("Todos os testes passaram para a função interseccaoListas!")
     */
 
