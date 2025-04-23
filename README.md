@@ -13,3 +13,4 @@
 
 ## [04 - Listas](conceitos/04-imperativo-listas.md)
 - [04.1-imperativo-listas.kt](exercicios/04.1-imperativo-listas.kt)
+- [04.2-imperativo-listas.kt](exercicios/04.2-imperativo-listas.kt)
