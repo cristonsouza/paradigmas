@@ -15,3 +15,6 @@
 - [04.1-imperativo-listas.kt](exercicios/04.1-imperativo-listas.kt)
 - [04.2-imperativo-listas.kt](exercicios/04.2-imperativo-listas.kt)
 - [04.3-imperativo-listas.kt](exercicios/04.3-imperativo-listas.kt)
+
+## [05 - Conjuntos e Dicionários](conceitos/05-imperativo-conjuntos-dicionarios.md)
+- [05.1-imperativo-conjuntos-dicionarios.kt](exercicios/05.1-imperativo-conjuntos-dicionarios.kt)
