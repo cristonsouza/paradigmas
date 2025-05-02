@@ -155,6 +155,8 @@ Você pode acessar o valor associado a uma chave de várias maneiras:
     val idadeDesconhecida = idades["David"]
     println(idadeDesconhecida) // Saída: null (se a chave não existir)
     ```
+    **Obs.:** Ao usar o `[]` dentro de uma expressão, pode encontrar um erro do tipo `Argument type mismatch: actual type is 'Int?', but 'Int' was expected`. É possível resolver usando as funções a seguir.
+    A causa deste erro ficará clara na aula sobre tipos algébricos.
 
 * **Usando a função `get(key)`:**
     ```kotlin
