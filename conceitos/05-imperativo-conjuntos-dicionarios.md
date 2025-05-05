@@ -29,6 +29,11 @@ Você pode criar `Sets` usando as seguintes funções:
     // Saída: [1, 2, 3, 4] (duplicatas são removidas)
     ```
 
+    Para criar um MutableSet vazio, utilize `mutableMapOf<Tipo>()`.
+    ```kotlin
+    val numeros = mutableSetOf<Int>()
+    ```
+
 **Operações Comuns em Sets:**
 
 Aqui estão algumas operações comuns que você pode realizar em `Sets`:
@@ -143,6 +148,12 @@ Você pode criar `Maps` usando as seguintes funções:
     // Saída: {JogadorA=100, JogadorB=150}
     ```
 
+    Para criar um MutableMap vazio, utilize `mutableMapOf<TipoChave, TipoValor>()`.
+    ```kotlin
+    val idades: MutableMap<String, Int> = mutableMapOf()
+    ```
+
+
 **Acesso a Valores:**
 
 Você pode acessar o valor associado a uma chave de várias maneiras:
@@ -155,7 +166,7 @@ Você pode acessar o valor associado a uma chave de várias maneiras:
     val idadeDesconhecida = idades["David"]
     println(idadeDesconhecida) // Saída: null (se a chave não existir)
     ```
-    **Obs.:** Ao usar o `[]` dentro de uma expressão, pode encontrar um erro do tipo `Argument type mismatch: actual type is 'Int?', but 'Int' was expected`. É possível resolver usando as funções a seguir.
+    **Obs.:** Ao usar o `[]` dentro de uma expressão, pode encontrar um erro do tipo `Argument type mismatch: actual type is 'Int?', but 'Int' was expected`. É possível resolver usando a função `getOrDefault` (a seguir).
     A causa deste erro ficará clara na aula sobre tipos algébricos.
 
 * **Usando a função `get(key)`:**
@@ -229,12 +240,6 @@ Aqui estão algumas operações comuns que você pode realizar em `Maps`:
     pontuacoes.putAll(novasPontuacoes)
     println(pontuacoes) 
     // Saída: {JogadorA=120, JogadorC=200, JogadorD=180, JogadorE=220}
-    ```
-
-* **`clear()` (somente para `MutableMap`):** Remove todos os pares de chave-valor do mapa.
-    ```kotlin
-    pontuacoes.clear()
-    println(pontuacoes) // Saída: {}
     ```
 
 **Iteração em Maps:**
