@@ -12,6 +12,9 @@ fun main() {
      * Função que recebe duas strings e retorna uma tupla contendo o número de palavras
      * que ocorrem nas duas strings e o número de palavras que ocorrem em pelo menos
      * uma das strings.
+     * 
+     * Obs.: O método s.split(" ") retorna a lista de palavras contidas na string s.
+     * Exemplo: "ola mundo ola".split(" ") retorna a lista ["ola", "mundo", "ola"].
      */
     fun contarPalavrasComuns(s1: String, s2: String): Pair<Int, Int> {
         // <FORNEÇA AQUI SUA SOLUÇÃO>
