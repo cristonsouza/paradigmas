@@ -19,6 +19,8 @@
 ## [05 - Conjuntos e dicionários](conceitos/05-imperativo-conjuntos-dicionarios.md)
 - [05.1-imperativo-conjuntos-dicionarios.kt](exercicios/05.1-imperativo-conjuntos-dicionarios.kt)
 
+---
+
 # FUNCIONAL (em Kotlin)
 
 ## [06 - Restrições e recursão](conceitos/06-funcional-recursao.md)
