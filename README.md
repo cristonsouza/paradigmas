@@ -25,3 +25,4 @@
 
 ## [06 - Restrições e recursão](conceitos/06-funcional-recursao.md)
 - [06.1-funcional-recursao.kt](exercicios/06.1-funcional-recursao.kt)
+- [07.1-funcional-recursao-listas.kt](exercicios/07.1-funcional-recursao-listas.kt)
