@@ -130,13 +130,17 @@ fun fatorialNormal(n: Int): Long {
 println("Fatorial de 5 (normal): ${fatorialNormal(5)}") // Saída: 120
 // fatorialNormal(20000) // causaria StackOverflowError para valores grandes de n
 
-// Recursão de Cauda (otimizada com 'tailrec')
-tailrec fun fatorialCauda(n: Int, acumulador: Long = 1): Long {
-    if (n == 0) {
-        return acumulador
+fun fatorialCauda(n: Int): Long {
+    
+    // Recursão de Cauda (otimizada com 'tailrec')
+    tailrec fun auxiliar(n: Int, acumulador: Long = 1): Long {
+        if (n == 0) return acumulador
+    
+        // A chamada recursiva é a ÚLTIMA operação
+        return auxiliar(n - 1, n * acumulador)
     }
-    // A chamada recursiva é a ÚLTIMA operação
-    return fatorialCauda(n - 1, acumulador * n)
+    
+    return auxiliar(n)
 }
 
 println("Fatorial de 5 (cauda): ${fatorialCauda(5)}") // Saída: 120
