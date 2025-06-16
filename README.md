@@ -30,3 +30,6 @@
 - [07.1-funcional-recursao-listas.kt](exercicios/07.1-funcional-recursao-listas.kt)
 - [07.2-funcional-recursao-listas.kt](exercicios/07.2-funcional-recursao-listas.kt)
 - [07.3-funcional-recursao-listas.kt](exercicios/07.3-funcional-recursao-listas.kt)
+
+## [08 - Filter/Map/Fold](conceitos/08-funcional-filter_map_fold.md)
+- [08.1-funcional-filter_map_fold.kt](exercicios/08.1-funcional-filter_map_fold.kt)
