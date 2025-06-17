@@ -100,29 +100,6 @@ fun main() {
 }
 ```
 
-**Lambdas como Argumentos de Funções:**
-
-```kotlin
-fun operacaoMatematica(a: Int, b: Int, operacao: (Int, Int) -> Int): Int {
-    return operacao(a, b)
-}
-
-fun main() {
-    val resultadoSoma = operacaoMatematica(10, 5) { x, y -> x + y }
-    println("Soma: $resultadoSoma") // Saída: Soma: 15
-
-    val resultadoSubtracao = operacaoMatematica(10, 5) { x, y -> x - y }
-    println("Subtração: $resultadoSubtracao") // Saída: Subtração: 5
-
-    // Se a lambda for o último parâmetro de uma função, você pode colocá-la fora dos parênteses (trailing lambda).
-    // Isso melhora muito a legibilidade.
-    val resultadoMultiplicacao = operacaoMatematica(10, 5) { x, y ->
-        x * y
-    }
-    println("Multiplicação: $resultadoMultiplicacao") // Saída: Multiplicação: 50
-}
-```
-
 ---
 
 ## `filter`
@@ -198,7 +175,7 @@ fun main() {
 
 ---
 
-## `range`
+## `range` (revisão)
 
 Em Kotlin, `range` é uma maneira conveniente de **criar uma sequência de valores**.
 
