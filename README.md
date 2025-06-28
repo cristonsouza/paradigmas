@@ -37,3 +37,4 @@
 ## 09 - Listas (usando filter/map/fold)
 - [09.1-funcional-filter_map_fold-listas.kt](exercicios/09.1-funcional-filter_map_fold-listas.kt)
 - [09.2-funcional-filter_map_fold-listas.kt](exercicios/09.2-funcional-filter_map_fold-listas.kt)
+- [09.3-funcional-filter_map_fold-listas.kt](exercicios/09.3-funcional-filter_map_fold-listas.kt)
