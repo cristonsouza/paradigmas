@@ -124,7 +124,7 @@ data class Falha(val msg: String) : ResultadoRequisicao()
 object Carregando : ResultadoRequisicao()
 ```
 
-### Usando tipo "soma" para criar tipos recursivos
+## Tipos recursivos
 
 Quando a definição de um tipo utiliza ele mesmo.
 
