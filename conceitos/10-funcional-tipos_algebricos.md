@@ -17,6 +17,16 @@ fun main() {
 }
 ```
 
+### `data class`
+
+É uma classe cujo propósito é armazenar dados. Kotlin gera automaticamente métodos como `equals`, `hashCode`, `toString`, e `copy`.
+
+Algumas características:
+- Representação legível (implementada no `toString`).
+- Comparação dos conteúdos (implementada no `equals`), não das referências.
+- Pode herdar de outras classes, mas não pode ser herdada por outras classes.
+
+
 ## Operação "soma"
 A operação "soma" permite que um tipo **possa ser um de vários tipos diferentes**.
 
