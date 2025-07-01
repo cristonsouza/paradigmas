@@ -40,4 +40,6 @@
 - [09.3-funcional-filter_map_fold-listas.kt](exercicios/09.3-funcional-filter_map_fold-listas.kt)
 
 ## [10 - Tipos algébricos e reconhecimento de padrões](conceitos/10-funcional-tipos_algebricos.md)
+- [10.1-funcional-tipos_algebricos-listas.kt](exercicios/10.1-funcional-tipos_algebricos-listas.kt)
+
 
