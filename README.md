@@ -41,5 +41,11 @@
 
 ## [10 - Tipos algébricos e reconhecimento de padrões](conceitos/10-funcional-tipos_algebricos.md)
 - [10.1-funcional-tipos_algebricos-listas.kt](exercicios/10.1-funcional-tipos_algebricos-listas.kt)
+- [10.2-funcional-tipos_algebricos-listas.kt](exercicios/10.2-funcional-tipos_algebricos-listas.kt)
 
+---
 
+# Lógico (em Prolog)
+
+## [11 - Conceitos](conceitos/11-logico-conceitos.md)
+- [11.1-logico-conceitos/](exercicios/11.1-logico-conceitos/)
