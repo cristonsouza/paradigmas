@@ -18,6 +18,13 @@ sealed class Arvore<out A> {
 
 fun main() {
 
+    // Função auxiliar para verificar os resultados dos testes (não modifique)
+    fun <T> assertEquals(funcao: String, esperado: T, resultado: T, fun_compare: (T, T) -> Boolean = { a, b -> a == b }) {
+        if (!fun_compare(esperado, resultado)) {
+            throw AssertionError("Falha em $funcao: Esperado $esperado, Obtido $resultado")
+        }
+    }
+
     /**
      * Verifique se uma 'Opcao' tem valor.
      * Ou seja, retorne 'true' se a opção é 'Algum' e 'false' se for 'Nenhum'.
@@ -27,8 +34,8 @@ fun main() {
     }
 
     /*
-    assert(temValor(Algum(10)) == true) { "Falha no teste 6: ${temValor(Algum(10))}" }
-    assert(temValor(Nenhum) == false) { "Falha no teste 7: ${temValor(Nenhum)}" }
+    assertEquals("temValor", true, temValor(Algum(10)))
+    assertEquals("temValor", false, temValor(Nenhum))
     println("Todos os testes passaram para a função temValor!")
     */
 
@@ -41,8 +48,8 @@ fun main() {
     }
 
     /*
-    assert(dobrarOpcao(Algum(5)) == Algum(10)) { "Falha no teste 8: ${dobrarOpcao(Algum(5))}" }
-    assert(dobrarOpcao(Nenhum) == Nenhum) { "Falha no teste 9: ${dobrarOpcao(Nenhum)}" }
+    assertEquals("dobrarOpcao", Algum(10), dobrarOpcao(Algum(5)))
+    assertEquals("dobrarOpcao", Nenhum, dobrarOpcao(Nenhum))
     println("Todos os testes passaram para a função dobrarOpcao!")
     */
 
@@ -58,9 +65,9 @@ fun main() {
     /*
     val arvore1: Arvore<Int> = Arvore.No(1, Arvore.No(2, Arvore.Folha, Arvore.Folha), Arvore.No(3, Arvore.Folha, Arvore.Folha))
     val arvore2: Arvore<String> = Arvore.No("a", Arvore.No("b", Arvore.No("c", Arvore.Folha, Arvore.Folha), Arvore.Folha), Arvore.Folha)
-    assert(alturaArvore(arvore1) == 2) { "Falha no teste 7: ${alturaArvore(arvore1)}" }
-    assert(alturaArvore(arvore2) == 3) { "Falha no teste 8: ${alturaArvore(arvore2)}" }
-    assert(alturaArvore(Arvore.Folha) == 0) { "Falha no teste 9: ${alturaArvore(Arvore.Folha)}" }
+    assertEquals("alturaArvore", 2, alturaArvore(arvore1))
+    assertEquals("alturaArvore", 3, alturaArvore(arvore2))
+    assertEquals("alturaArvore", 0, alturaArvore(Arvore.Folha))
     println("Todos os testes passaram para a função alturaArvore!")
     */
 
@@ -74,9 +81,9 @@ fun main() {
     }
 
     /*
-    assert(contarNosArvore(arvore1) == 3) { "Falha no teste 10: ${contarNosArvore(arvore1)}" }
-    assert(contarNosArvore(arvore2) == 3) { "Falha no teste 11: ${contarNosArvore(arvore2)}" }
-    assert(contarNosArvore(Arvore.Folha) == 0) { "Falha no teste 12: ${contarNosArvore(Arvore.Folha)}" }
+    assertEquals("contarNosArvore", 3, contarNosArvore(arvore1))
+    assertEquals("contarNosArvore", 3, contarNosArvore(arvore2))
+    assertEquals("contarNosArvore", 0, contarNosArvore(Arvore.Folha))
     println("Todos os testes passaram para a função contarNosArvore!")
     */
 
@@ -92,7 +99,7 @@ fun main() {
     /*
     val arvorePreOrdem: Arvore<String> = Arvore.No("a", Arvore.No("b", Arvore.No("d", Arvore.Folha, Arvore.Folha), Arvore.No("e", Arvore.Folha, Arvore.Folha)), Arvore.No("c", Arvore.No("f", Arvore.Folha, Arvore.Folha), Arvore.Folha))
     val resultadoEsperado: List<String> = listOf("a", "b", "d", "e", "c", "f")
-    assert(preOrdemArvore(arvorePreOrdem) == resultadoEsperado) { "Falha teste 15: ${preOrdemArvore(arvorePreOrdem)}" }
+    assertEquals("preOrdemArvore", resultadoEsperado, preOrdemArvore(arvorePreOrdem))
     println("Todos os testes passaram para a função preOrdemArvore!")
     */
 }
