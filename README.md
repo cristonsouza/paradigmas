@@ -45,7 +45,7 @@
 
 ---
 
-# Lógico (em Prolog)
+# LÓGICO (em Prolog)
 
 ## [11 - Conceitos](conceitos/11-logico-conceitos.md)
 - [11.1-logico-conceitos/](exercicios/11.1-logico-conceitos/)
