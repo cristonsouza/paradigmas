@@ -24,7 +24,21 @@ sealed class Lista<out A> {
     data class Cons<A>(val head: A, val tail: Lista<A>) : Lista<A>()
 }
 
+
 fun main() {
+
+    // Função auxiliar para verificar os resultados dos testes (não modifique)
+    fun <T> assertEquals(funcao: String, esperado: T, resultado: T, fun_compare: (T, T) -> Boolean = { a, b -> a == b }) {
+        if (!fun_compare(esperado, resultado)) {
+            throw AssertionError("Falha em $funcao: Esperado $esperado, Obtido $resultado")
+        }
+    }
+
+    // Função auxiliar para comparar duas listas do tipo 'Lista<A>' (utilizada nos casos de teste).
+    fun <A> comparaListas(lista1: Lista<A>, lista2: Lista<A>): Boolean = when (lista1) {
+        is Lista.Nil -> lista2 is Lista.Nil
+        is Lista.Cons -> lista2 is Lista.Cons && (lista1.head == lista2.head) && comparaListas(lista1.tail, lista2.tail)
+    }
 
     /**
      * Calcule a área de uma forma geométrica definida pelo tipo 'Forma'.
@@ -37,9 +51,9 @@ fun main() {
     }
 
     /*
-    assert(calcularArea(Circulo(5.0)) == 78.53981633974483) { "Falha no teste 3: ${calcularArea(Circulo(5.0))}" }
-    assert(calcularArea(Retangulo(4.0, 6.0)) == 24.0) { "Falha no teste 4: ${calcularArea(Retangulo(4.0, 6.0))}" }
-    assert(calcularArea(Triangulo(3.0, 8.0)) == 12.0) { "Falha no teste 5: ${calcularArea(Triangulo(3.0, 8.0))}" }
+    assertEquals("calcularArea", 78.53981633974483, calcularArea(Circulo(5.0)))
+    assertEquals("calcularArea", 24.0, calcularArea(Retangulo(4.0, 6.0)))
+    assertEquals("calcularArea", 12.0, calcularArea(Triangulo(3.0, 8.0)))
     println("Todos os testes passaram para a função calcularArea!")
     */
 
@@ -56,8 +70,8 @@ fun main() {
     }
 
     /*
-    assert(avaliarExpressao(Adicao(Numero(5), Multiplicacao(Numero(2), Numero(3)))) == 11) { "Falha no teste 1: ${avaliarExpressao(Adicao(Numero(5), Multiplicacao(Numero(2), Numero(3))))}" }
-    assert(avaliarExpressao(Numero(10)) == 10) { "Falha no teste 2: ${avaliarExpressao(Numero(10))}" }
+    assertEquals("avaliarExpressao", 11, avaliarExpressao(Adicao(Numero(5), Multiplicacao(Numero(2), Numero(3)))))
+    assertEquals("avaliarExpressao", 10, avaliarExpressao(Numero(10)))
     println("Todos os testes passaram para a função avaliarExpressao!")
     */
 
@@ -73,9 +87,9 @@ fun main() {
     /*
     val lista1: Lista<Int> = Lista.Cons(1, Lista.Cons(2, Lista.Cons(3, Lista.Nil)))
     val lista2: Lista<String> = Lista.Cons("a", Lista.Cons("b", Lista.Nil))
-    assert(comprimentoLista(lista1) == 3) { "Falha no teste 1: ${comprimentoLista(lista1)}" }
-    assert(comprimentoLista(lista2) == 2) { "Falha no teste 2: ${comprimentoLista(lista2)}" }
-    assert(comprimentoLista(Lista.Nil) == 0) { "Falha no teste 3: ${comprimentoLista(Lista.Nil)}" }
+    assertEquals("comprimentoLista", 3, comprimentoLista(lista1))
+    assertEquals("comprimentoLista", 2, comprimentoLista(lista2))
+    assertEquals("comprimentoLista", 0, comprimentoLista(Lista.Nil))
     println("Todos os testes passaram para a função comprimentoLista!")
     */
 
@@ -91,9 +105,9 @@ fun main() {
     /*
     val listaInvertida1: Lista<Int> = Lista.Cons(3, Lista.Cons(2, Lista.Cons(1, Lista.Nil)))
     val listaInvertida2: Lista<String> = Lista.Cons("b", Lista.Cons("a", Lista.Nil))
-    assert(inverterLista(lista1) == listaInvertida1) { "Falha no teste 4: ${inverterLista(lista1)}" }
-    assert(inverterLista(lista2) == listaInvertida2) { "Falha no teste 5: ${inverterLista(lista2)}" }
-    assert(inverterLista(Lista.Nil) == Lista.Nil) { "Falha no teste 6: ${inverterLista(Lista.Nil)}" }
+    assertEquals("inverterLista", listaInvertida1, inverterLista(lista1), ::comparaListas)
+    assertEquals("inverterLista", listaInvertida2, inverterLista(lista2), ::comparaListas)
+    assertEquals("inverterLista", Lista.Nil, inverterLista(Lista.Nil), ::comparaListas)
     println("Todos os testes passaram para a função inverterLista!")
     */
 
@@ -107,8 +121,8 @@ fun main() {
 
     /*
     val listaMax: Lista<Int> = Lista.Cons(5, Lista.Cons(10, Lista.Cons(2, Lista.Cons(15, Lista.Nil))))
-    assert(maximoLista(listaMax) == 15) { "Falha no teste 13: ${maximoLista(listaMax)}" }
-    assert(maximoLista(Lista.Cons(5, Lista.Nil)) == 5) { "Falha no teste 14: ${maximoLista(Lista.Cons(5, Lista.Nil))}" }
+    assertEquals("maximoLista", 15, maximoLista(listaMax))
+    assertEquals("maximoLista", 5, maximoLista(Lista.Cons(5, Lista.Nil)))
     println("Todos os testes passaram para a função maximoLista!")
     */
 
@@ -122,11 +136,11 @@ fun main() {
     }
 
     /*
-    val listaConcatenada1: Lista<Int> = Lista.Cons(1, Lista.Cons(2, Lista.Cons(3, Lista.Cons(4, Lista.Nil))))
-    val listaConcatenada2: Lista<String> = Lista.Cons("a", Lista.Cons("b", Lista.Cons("c", Lista.Cons("d", Lista.Nil))))
-    assert(concatenaListas(Lista.Cons(1, Lista.Cons(2, Lista.Nil)), Lista.Cons(3, Lista.Cons(4, Lista.Nil)) ) == listaConcatenada1) { "Falha no teste 15: ${concatenaListas(Lista.Cons(1, Lista.Cons(2, Lista.Nil)), Lista.Cons(3, Lista.Cons(4, Lista.Nil)) )}" }
-    assert(concatenaListas(Lista.Cons("a", Lista.Cons("b", Lista.Nil)), Lista.Cons("c", Lista.Cons("d", Lista.Nil)) ) == listaConcatenada2) { "Falha no teste 16: ${concatenaListas(Lista.Cons("a", Lista.Cons("b", Lista.Nil)), Lista.Cons("c", Lista.Cons("d", Lista.Nil)) )}" }
-    assert(concatenaListas(Lista.Nil, Lista.Nil) == Lista.Nil) { "Falha no teste 17: ${concatenaListas(Lista.Nil, Lista.Nil)}" }
+    val r1: Lista<Int> = Lista.Cons(1, Lista.Cons(2, Lista.Cons(3, Lista.Cons(4, Lista.Nil))))
+    val r2: Lista<String> = Lista.Cons("a", Lista.Cons("b", Lista.Cons("c", Lista.Cons("d", Lista.Nil))))
+    assertEquals("concatenaListas", r1, concatenaListas(Lista.Cons(1, Lista.Cons(2, Lista.Nil)), Lista.Cons(3, Lista.Cons(4, Lista.Nil))), ::comparaListas)
+    assertEquals("concatenaListas", r2, concatenaListas(Lista.Cons("a", Lista.Cons("b", Lista.Nil)), Lista.Cons("c", Lista.Cons("d", Lista.Nil))), ::comparaListas)
+    assertEquals("concatenaListas", Lista.Nil, concatenaListas(Lista.Nil, Lista.Nil), ::comparaListas)
     println("Todos os testes passaram para a função concatenaListas!")
     */
 }
