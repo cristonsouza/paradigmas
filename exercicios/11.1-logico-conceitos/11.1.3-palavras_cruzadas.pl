@@ -9,19 +9,19 @@ Elas devem ser organizadas como palavras cruzadas, na seguinte grade:
 
          V1      V2      V3
         +---+   +---+   +---+
-        |   |   |   |   |   |
+        | X |   | X |   | X |
     +---+---+---+---+---+---+---+
-H1  |   |   |   |   |   |   |   |
+H1  | X | X | X | X | X | X | X |
     +---+---+---+---+---+---+---+
-        |   |   |   |   |   |  
+        | X | X | X | X | X |  
     +---+---+---+---+---+---+---+
-H2  |   |   |   |   |   |   |   |
+H2  | X | X | X | X | X | X | X |
     +---+---+---+---+---+---+---+
-        |   |   |   |   |   |
+        | X | X | X | X | X |
     +---+---+---+---+---+---+---+
-H3  |   |   |   |   |   |   |   |
+H3  | X | X | X | X | X | X | X |
     +---+---+---+---+---+---+---+
-        |   |   |   |   |   |
+        | X |   | X |   | X |
         +---+   +---+   +---+
 
 A base de conhecimento abaixo separa as letras de cada palavra.
