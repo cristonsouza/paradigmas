@@ -85,7 +85,7 @@
     - `>`: maior que (ex.: `X > 5`).
     - `>=`: maior ou igual a (ex.: `X >= 5`).
 - **Operadores lógicos**:
-    *   **Negação:** Representada por `\+` (não). 
+    *   **Negação:** Representada por `\+` (não). É `true` apenas quando não é possível provar que a expressão é verdadeira.
         - Ex.: `\+ tocaViolao(maria).` significa "Maria **não** toca violão".
     *   **Conjunção (AND):** Representada por vírgula `,` no corpo de uma regra. 
         - Ex.: `gostaDeMusica(X) :- tocaViolao(X), festa.` significa "X gosta de música **SE** X toca violão **E** há festa".
@@ -118,6 +118,10 @@
                 pessoa(Nome, _, _),
                 (gosta(Nome, cachorro); gosta(Nome, gato)).
 
+            % Foi necessário fixar TipoAnimal antes de testar que não é mamífero.
+            % Caso contrário, quando TipoAnimal é livre, estamos pedindo para o 
+            % Prolog provar que não é possível encontrar um animal que seja 
+            % mamífero, o que é falso, pois existem animais mamíferos.
             nao_eh_mamifero(TipoAnimal) :-
                 animal(TipoAnimal, _),
                 \+ animal(TipoAnimal, mamifero).
@@ -162,16 +166,18 @@
 
 - **Unificação**: é o processo de fazer duas expressões iguais, substituindo variáveis por valores.
     - Ex.: `gosta_de_animal_de_estimacao(X)` unifica `X` com `joao`, `maria`, etc.
+- **Operador `=`**: usado para unificação explícita.
+    - Ex.: `pessoa(joao, homem, Idade) = pessoa(joao, Genero, 30).`
+        - Isso unifica `Idade` com `30` e `Genero` com `homem`, e retorna `true`.
+    - Cuidado: sempre verifique se algumas variáveis deveriam estar fixadas pelas expressões anteriores, pois vale `true` sempre que as variáveis puderem ser unificadas.
     - Cuidado com expressões aritméticas na unificação, pois a unificação não calcula o resultado da expressão.
         - Ex.: `X = 5 + 3` não unifica `X` com `8`, mas sim com a expressão `5 + 3` (relação `+(5,3)`).
         - Use `is` (ao invés de `=`) para calcular o valor da expressão na unificação.
             - Ex.: `X is 5 + 3` unifica `X` com `8`.
-- **Operador `=`**: usado para unificação explícita.
-    - Ex.: `pessoa(joao, homem, Idade) = pessoa(joao, Genero, 30).`
-        - Isso unifica `Idade` com `30` e `Genero` com `homem`, e retorna `true`.
 - **Operador `\=`**: usado para verificar se duas expressões não são unificáveis.
     - Ex.: `animal(gato, X) \= animal(_, reptil).`
         - Retorna `true`, pois não é possível unificar `X` com `reptil`.
+    - Cuidado: sempre verifique se algumas variáveis deveriam estar fixadas pelas expressões anteriores, pois vale `false` sempre que as variáveis puderem ser unificadas.
 - **Operador `==`**: verifica se duas expressões já são idênticas (sem necessidade de unificação).
     - Ex.: `pessoa(joao, homem, 30) == pessoa(joao, homem, 30).`
         - Retorna `true`, pois as duas expressões são idênticas.
