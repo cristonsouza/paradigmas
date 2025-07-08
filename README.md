@@ -49,3 +49,6 @@
 
 ## [11 - Conceitos](conceitos/11-logico-conceitos.md)
 - [11.1-logico-conceitos/](exercicios/11.1-logico-conceitos/)
+
+## [12 - Recursão](conceitos/12-logico-recursao.md)
+- [12.1-logico-recursao/](exercicios/12.1-logico-recursao/)
