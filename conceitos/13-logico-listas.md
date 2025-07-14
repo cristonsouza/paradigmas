@@ -57,11 +57,8 @@
     X = [a, a], Y = [b, b] . % Encontra solução com dois elementos, e assim por diante.
     ```
 
-*   A **caso base** para `a2b` ocorre quando as duas listas são vazias:
+* **Implementação:**
     ```prolog
-    a2b([],[]).
-    ```
-*   A **regra recursiva** é:
-    ```prolog
-    a2b([a|Ta],[b|Tb]) :- a2b(Ta,Tb).
+    a2b([],[]). % caso base
+    a2b([a|Ta],[b|Tb]) :- a2b(Ta,Tb). % regra recursiva
     ```
