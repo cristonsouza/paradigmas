@@ -52,3 +52,6 @@
 
 ## [12 - Recursão](conceitos/12-logico-recursao.md)
 - [12.1-logico-recursao/](exercicios/12.1-logico-recursao/)
+
+## [13 - Listas](conceitos/13-logico-listas.md)
+- [13.1-logico-listas/](exercicios/13.1-logico-listas/)
