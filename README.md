@@ -19,6 +19,8 @@
 ## [05 - Conjuntos e dicionários](conceitos/05-imperativo-conjuntos-dicionarios.md)
 - [05.1-imperativo-conjuntos-dicionarios.kt](exercicios/05.1-imperativo-conjuntos-dicionarios.kt)
 
+## [Exercícios de revisão do paradigma imperativo](exercicios/revisao_imperativo_enunciado.kt)
+
 ---
 
 # FUNCIONAL (em Kotlin)
@@ -42,6 +44,8 @@
 ## [10 - Tipos algébricos e reconhecimento de padrões](conceitos/10-funcional-tipos_algebricos.md)
 - [10.1-funcional-tipos_algebricos-listas.kt](exercicios/10.1-funcional-tipos_algebricos-listas.kt)
 - [10.2-funcional-tipos_algebricos-arvores.kt](exercicios/10.2-funcional-tipos_algebricos-arvores.kt)
+
+## [Exercícios de revisão do paradigma funcional](exercicios/revisao_funcional_enunciado.kt)
 
 ---
 
